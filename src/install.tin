@@ -1,0 +1,7 @@
+# Hey Emacs, use -*- Tcl -*- mode
+
+package require tin 1.0
+
+set dir [tin mkdir -force testin @VERSION@]
+file copy testin.tcl $dir
+file copy pkgIndex.tcl $dir
