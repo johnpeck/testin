@@ -15,7 +15,7 @@ proc ::testin::iterint {args} {
 
     set count 0
     set intlist [list]
-    while { [llength $intlist] <= $arg(length) } {
+    while { [llength $intlist] < $arg(length) } {
 	    lappend intlist [expr $arg(first) + $count]
 	    incr count
 	}
@@ -23,4 +23,4 @@ proc ::testin::iterint {args} {
 }
 
 # Finally, provide the package
-package provide testin 1.0
+package provide testin 1.1
