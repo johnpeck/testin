@@ -16,6 +16,9 @@ package manager.  Tin allows easy installation of
     - [Installing Tcllib](#installing-tcllib)
         - [Linux](#linux)
         - [Windows](#windows)
+    - [Installing Testin with Tin](#installing-testin-with-tin)
+        - [Linux](#linux-1)
+        - [Windows](#windows-1)
 
 <!-- markdown-toc end -->
 
