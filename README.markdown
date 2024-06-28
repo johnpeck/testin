@@ -8,6 +8,18 @@ package manager.  Tin allows easy installation of
 
 [Image by upklyak on Freepik](https://www.freepik.com/author/upklyak)
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Testin: Testing the Tin Tcl Package Manager](#testin-testing-the-tin-tcl-package-manager)
+    - [Installing Tin](#installing-tin)
+    - [Installing Tcllib](#installing-tcllib)
+        - [Linux](#linux)
+        - [Windows](#windows)
+
+<!-- markdown-toc end -->
+
+
 ## Installing Tin ##
 
 Follow the instructions at the [Tin repository](https://github.com/ambaker1/Tin) to install Tin.
@@ -54,4 +66,26 @@ I usually just manually copy Tcllib into the `lib` directory of my Tcl installat
 ...so I can run Tcl the same way on both platforms.
 
 
+## Installing Testin with Tin ##
+
+### Linux ###
+
+Linux is different from Windows because of permissions.  I need sudo to install Tcl packages to `/usr/share/tcltk`.
+
+```
+$ sudo tclsh
+% package require tin
+1.1
+%
+% tin add -auto testin https://github.com/johnpeck/testin install.tcl 1.0
+% tin install testin 1.1
+searching in the Tin for testin 1.1 ...
+installing testin 1.1 from https://github.com/johnpeck/testin v1.1 ...
+testin version 1.1 installed successfully
+1.1
+```
+
+### Windows ###
+
+Windows is the same as Linux, except you can skip the sudo.
 
