@@ -6,7 +6,13 @@ namespace eval ::testin {
     
 }
 
-proc ::testin::iterint {args} {
+proc ::testin::intlist {args} {
+    # Return a list of increasing integers starting with start with
+    # length points
+    #
+    # Arguments:
+    #   first -- First integer in the list
+    #   length -- Number of integers in the list
     set myoptions {
 	{first.arg 0 "First integer"}
 	{length.arg 10 "Length of the list"}
@@ -23,4 +29,4 @@ proc ::testin::iterint {args} {
 }
 
 # Finally, provide the package
-package provide testin 1.1
+package provide testin 1.2
