@@ -155,7 +155,24 @@ proc test_require {} {
     }
 }
 
+proc test_intlist_length { length } {
+    # Test the length of the list produced with intlist
+    # Arguments:
+    #   length -- Target length
+    info_message "Test length of list made by intlist"
+    set output_list [::testin::intlist -length $length]
+    if { [llength $output_list] == $length } {
+	pass_message "intlist length is correct"
+	return
+    } else {
+	fail_message "Expected length of $length, got [llength $output_list]"
+	exit
+    }
+}
+
 ########################## Main entry point ##########################
 
 test_require
+
+test_intlist_length 5
 
