@@ -12,7 +12,7 @@ package_name = testin
 # https://www.tcl-lang.org/man/tcl/TclCmd/package.htm
 #
 # Tin allows two digits: major.minor
-version = 1.2
+version = 1.3
 
 ######################## End of Configuration ########################
 
