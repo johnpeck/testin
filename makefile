@@ -46,6 +46,11 @@ help:
 bake:
 	tclsh bake.tcl -v $(version)
 
+.PHONY: install
+install:
+	tclsh install.tcl
+
+
 .PHONY: test
 test:
 	tclsh test/test.tcl -n $(package_name) -v $(version)

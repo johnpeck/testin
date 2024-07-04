@@ -1,0 +1,6 @@
+
+# Ignore temporary files
+*~
+
+# Ignore the TODO list
+testin.org
