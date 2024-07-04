@@ -129,7 +129,28 @@ proc indented_message { message } {
     puts $message
 }
 
-proc test_require {} {
+
+proc test_require_tin {} {
+    # Test if Tin is installed
+    info_message "Test Tin installation"
+    try {
+	set version [package require tin]
+    } trap {} {message optdict} {
+	fail_message "Failed to load Tin package"
+	indented_message "$message"
+	exit
+    }
+
+    pass_message "Loaded Tin version $version"
+    set action_script [package ifneeded tin $version]
+    indented_message "Action script is:"
+    foreach line [split $action_script "\n"] {
+	indented_message $line
+    }
+    return
+}
+
+proc test_require_package {} {
     # Test requiring the package and the package version
     global params
     info_message "Test loading package"
@@ -172,7 +193,7 @@ proc test_intlist_length { length } {
 
 ########################## Main entry point ##########################
 
-test_require
+test_require_package
 
 test_intlist_length 5
 

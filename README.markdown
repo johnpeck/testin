@@ -80,7 +80,7 @@ $ sudo tclsh
 % package require tin
 1.1
 %
-% tin add -auto testin https://github.com/johnpeck/testin install.tcl 1.0
+% tin add -auto testin https://github.com/johnpeck/testin install.tcl
 % tin install testin 1.1
 searching in the Tin for testin 1.1 ...
 installing testin 1.1 from https://github.com/johnpeck/testin v1.1 ...

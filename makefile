@@ -31,10 +31,13 @@ help:
 	@echo "Makefile for $(package_name)"
 	@printf "%$(indent_text_width)s %-$(target_text_width)s %s\n" \
           "make" "bake" \
-          "Create tcl files from tin templates"
+          "Create tcl files from tin templates for version $(version)"
 	@printf "%$(indent_text_width)s %-$(target_text_width)s %s\n" \
           "make" "test" \
           "Test package"
+	@printf "%$(indent_text_width)s %-$(target_text_width)s %s\n" \
+          "(sudo) make" "install" \
+          "Install package into $(shell tclsh libloc.tcl)"
 	@printf "%$(indent_text_width)s %-$(target_text_width)s %s\n" \
           "make" "clean" \
           "Remove generated files"
