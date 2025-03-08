@@ -68,27 +68,21 @@ I usually just manually copy Tcllib into the `lib` directory of my Tcl installat
 
 ...so I can run Tcl the same way on both platforms.
 
+## Installing Testin with Tin
 
-## Installing Testin with Tin ##
-
-### Linux ###
-
-Linux is different from Windows because of permissions.  I need sudo to install Tcl packages to `/usr/share/tcltk`.
+The following code installs testin on both Linux and Windows
 
 ```
-$ sudo tclsh
-% package require tin
-1.1
+$ tclsh
+% package require tin 2.1
+2.1
 %
-% tin add -auto testin https://github.com/johnpeck/testin install.tcl
-% tin install testin 1.1
-searching in the Tin for testin 1.1 ...
-installing testin 1.1 from https://github.com/johnpeck/testin v1.1 ...
-testin version 1.1 installed successfully
-1.1
+% tin autoadd testin https://github.com/johnpeck/testin install.tcl
+% tin install testin 1.4
+searching in the Tin for testin 1.4 ...
+installing testin 1.4 from https://github.com/johnpeck/testin v1.1 ...
+testin version 1.4 installed successfully
+1.4
 ```
 
-### Windows ###
-
-Windows is the same as Linux, except you can skip the sudo.
 

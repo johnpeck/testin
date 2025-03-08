@@ -1,6 +1,6 @@
 # Hey Emacs, use -*- Tcl -*- mode
 
-package require tin 1.0
+package require tin 2.1
 
 set dir [tin mkdir -force testin @VERSION@]
 file copy testin.tcl $dir

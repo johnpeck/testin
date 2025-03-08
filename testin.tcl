@@ -29,4 +29,4 @@ proc ::testin::intlist {args} {
 }
 
 # Finally, provide the package
-package provide testin 1.3
+package provide testin 1.4
